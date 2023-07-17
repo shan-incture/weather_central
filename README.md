@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application has 2 tables. Location table and the Air Pollution data table. The air pollution table take location_id
+as a foreign key. 
 
-Things you may want to cover:
+To start please have docker installed . I used docker to run both my sql server and redis for sidekiq
 
-* Ruby version
+To run redis use the following command : docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
+for Postgres Sql : docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest.
 
-* System dependencies
+Please run rails db:migration and rails db:seed to setup the database.
 
-* Configuration
 
-* Database creation
+Some of the things i was able to do this in project are
 
-* Database initialization
+* Was able to schedule the job via sidekiq cron scheduler . To kick off job please start worker from console
+* Was able to covert the APi client to service object
+* Able to hit the API and store the data into the database
+* complete rspec using VCR for most of the classes
+* create an importer class to be able to parse the data
 
-* How to run the test suite
+i was not able to come around to the bonus tasks.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The API key in OpenWeatherMapCall has to be updated with a working key for the api to work. The hardcoded key there is disabled.
