@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/air_pollution?appid=62e817e7c30005323d257f62cc4b63ff&lat=37.77493&lon=-122.41941
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 16 Jul 2023 22:07:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '191'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/air_pollution?lat=37.77&lon=-122.42"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-122.4194,"lat":37.7749},"list":[{"main":{"aqi":2},"components":{"co":196.93,"no":0.11,"no2":0.58,"o3":75.82,"so2":1.24,"pm2_5":3.85,"pm10":6.32,"nh3":0.07},"dt":1689545244}]}'
+  recorded_at: Sun, 16 Jul 2023 22:07:24 GMT
+recorded_with: VCR 6.2.0
