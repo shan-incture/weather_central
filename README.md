@@ -1,4 +1,4 @@
-# Weaher central
+# Weather central
 
 The application has 2 tables. Location table and the Air Pollution data table. The air pollution table take location_id
 as a foreign key. 
