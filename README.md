@@ -19,6 +19,5 @@ Some of the things i was able to do this in project are
 * complete rspec using VCR for most of the classes
 * create an importer class to be able to parse the data
 
-i was not able to come around to the bonus tasks.
 
 The API key in OpenWeatherMapCall has to be updated with a working key for the api to work. The hardcoded key there is disabled.
